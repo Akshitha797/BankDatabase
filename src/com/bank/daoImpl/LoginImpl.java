@@ -67,10 +67,11 @@ public class LoginImpl implements Login {
 				break;
 				
 			}
-			if(count==0) 
-				System.out.println("Wrong credentials");
 			
 		}
+		if(count==0) 
+			System.out.println("Wrong credentials");
+		
 		connection.close();
 
 			

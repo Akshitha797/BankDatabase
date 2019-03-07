@@ -6,11 +6,13 @@ import java.util.Scanner;
 
 import com.bank.dao.Transaction;
 import com.bank.utility.Database;
+import com.bank.view.ViewDetails;
 
 
 public class TransactionImpl implements Transaction{
 
 	Scanner s=new Scanner(System.in);
+	ViewDetails v=new ViewDetails();
 	
 
 	public void withdrawal(long accNo,int balance,int amount) {
@@ -32,6 +34,8 @@ public class TransactionImpl implements Transaction{
 				System.out.println("Transaction Successfull");
 			else
 				System.out.println("ERROR");
+			
+			v.operations();
 			
 			connection.close();
 			
@@ -62,6 +66,7 @@ public class TransactionImpl implements Transaction{
 			else
 				System.out.println("ERROR");
 			
+			v.operations();
 			connection.close();
 			
 		} catch (SQLException e) {

@@ -18,6 +18,7 @@ public class ViewDetails {
 		System.out.println("1.Registration \n 2.Login");
 		
 		int ch=s.nextInt();
+		
 		switch(ch) {
 		
 		case 1 : Registration r=new RegistrationImpl();
